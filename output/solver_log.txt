@@ -1,0 +1,11 @@
+Solver: HiGHS via scipy.optimize.linprog (method='highs')
+Model: 40 variables, 20 equality rows, 20 capacity rows
+Base: status=optimal, iterations=9, time=0.008s
+Message: Optimization terminated successfully. (HiGHS Status 7: Optimal)
+
+base: status=optimal, iterations=9, objective=422.995
+arc_failure (N7->N0): status=optimal, iterations=9, objective=595.64
+demand_x1.2: status=optimal, iterations=9, objective=563.4350000000001
+stress (demand_x1.4, cap_x0.75): status=infeasible, iterations=0, objective=None
+
+MILP (scipy.optimize.milp, HiGHS): status=optimal, objective=426.95, time=0.017s, mip_gap=0.0

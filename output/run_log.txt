@@ -1,0 +1,41 @@
+Данные: /home/deeg05/mephi/molp-lab-2/data/network.json, seed=10204
+  K0: N1 -> N4, спрос 20
+  K1: N9 -> N0, спрос 21
+
+Базовый сценарий: status=optimal, min cost = 423.00, время 0.008 c
+Независимая проверка: ok=True, max_violation=0.00e+00, пересчитанная цель=423.00 (расхождение с солвером 0.00e+00)
+Таблица потоков: 10 ненулевых переменных -> output/solution_base.csv
+
+Узкие места (насыщенные дуги): 2
+  N8->N4: 17.0/17.0, теневая цена = 8.3300
+  N7->N0: 19.5/19.5, теневая цена = 7.9100
+Схема сети: output/network_base.png
+
+=== Сценарный анализ ===
+[base] status=optimal, objective=423.00, max_violation=0.00e+00
+[arc_failure (N7->N0)] status=optimal, objective=595.64, max_violation=0.00e+00
+[demand_x1.2] status=optimal, objective=563.44, max_violation=0.00e+00
+[stress (demand_x1.4, cap_x0.75)] status=infeasible: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+[greedy_residual @ base] feasible=True, objective=423.00, gap=0.0%
+[greedy_naive @ base] feasible=False, objective=386.14, gap=-8.71%, перегруженных дуг: 2
+[greedy_residual @ arc_failure (N7->N0)] feasible=True, objective=595.64, gap=-0.0%
+[greedy_naive @ arc_failure (N7->N0)] feasible=False, objective=552.25, gap=-7.28%, перегруженных дуг: 3
+[greedy_residual @ demand_x1.2] feasible=True, objective=563.43, gap=-0.0%
+[greedy_naive @ demand_x1.2] feasible=False, objective=461.62, gap=-18.07%, перегруженных дуг: 2
+
+
+
+
+
+
+
+
+
+
+Таблица сценариев: output/scenarios.csv
+
+=== Дополнительное задание: целочисленные рейсы (MILP) ===
+LP : status=optimal, objective=423.00, время 0.004 c
+MILP: status=optimal, objective=426.95, время 0.017 c, mip_gap=0.0
+Все потоки целочисленны: True; проверка допустимости: ok=True, max_violation=0.00e+00
+Цена дискретности: +3.95 (0.93%) к LP-оптимуму

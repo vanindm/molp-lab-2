@@ -1,0 +1,3 @@
+version,objective,time_s,mip_gap,cost_of_discrete_pct
+LP,422.995,0.0037689078599214554,,
+MILP,426.95,0.017001135740429163,0.0,0.9349992316694012

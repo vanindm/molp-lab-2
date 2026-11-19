@@ -1,0 +1,11 @@
+scenario,status,objective,delta_cost_vs_base,gap_vs_optimum_pct,overloaded_arcs
+base,optimal,422.995,0.0,,
+arc_failure (N7->N0),optimal,595.64,172.64499999999998,,
+demand_x1.2,optimal,563.4350000000001,140.44000000000005,,
+"stress (demand_x1.4, cap_x0.75)",infeasible,,,,
+greedy_residual @ base,feasible,422.995,,0.0,
+greedy_naive @ base,INFEASIBLE,386.14,,-8.712868946441452,N8->N4: 20.0/17; N7->N0: 21.0/19.5
+greedy_residual @ arc_failure (N7->N0),feasible,595.6399999999999,,-1.9086501531397493e-14,
+greedy_naive @ arc_failure (N7->N0),INFEASIBLE,552.25,,-7.284601437109661,N2->N8: 21.0/11; N9->N2: 21.0/18; N8->N4: 20.0/17
+greedy_residual @ demand_x1.2,feasible,563.435,,-2.0177453960370944e-14,
+greedy_naive @ demand_x1.2,INFEASIBLE,461.62,,-18.070407411680147,N8->N4: 24.0/17; N7->N0: 25.0/19.5
